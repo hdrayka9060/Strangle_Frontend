@@ -55,7 +55,7 @@ const Home = (props)=>{
         }
     }
 
-    const { sendJsonMessage, getWebSocket } = useWebSocket('ws://localhost:5500', {
+    const { sendJsonMessage, getWebSocket } = useWebSocket('ws://3.110.3.235:5500', {
         onOpen: handleOpen,
         onClose: handleClose,
         shouldReconnect: (closevent) => true,

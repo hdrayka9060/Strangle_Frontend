@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import './VideoBox.css'
 import './ChatBox.css'
 import MsgRecieved from './MsgRecieved';
@@ -147,7 +147,7 @@ export default function (props) {
 
     }
 
-    const { sendJsonMessage, getWebSocket } = useWebSocket('ws://localhost:5000', {
+    const { sendJsonMessage, getWebSocket } = useWebSocket('ws://3.110.3.235:5000', {
         onOpen: handleonopen,
         onClose: () => console.log('WebSocket connection closed.'),
         shouldReconnect: (closevent) => true,
