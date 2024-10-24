@@ -5,7 +5,7 @@ import MsgRecieved from './MsgRecieved';
 import MsgSent from './MsgSent';
 import useWebSocket from "react-use-websocket";
 
-export default function (props) {
+function ChatBox (props) {
 
     const [addFriendFlag, setAddFriendFlag] = useState(1);
     const [msg, setmsg] = useState('');
@@ -280,16 +280,16 @@ export default function (props) {
     let addtracks = async (e) => {
         setcansend(true);
         negoflag = true;
-        localstream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+        // localstream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         // console.log('stream',localstream)
-        if (videoRef.current) {
-            videoRef.current.srcObject = localstream;
-        }
-        let tracks = localstream.getTracks();
-        tracks.forEach((track) => {
-            console.log(' local track adding');
-            peerConnection.addTrack(track, localstream);
-        });
+        // if (videoRef.current) {
+            // videoRef.current.srcObject = localstream;
+        // }
+        // let tracks = localstream.getTracks();
+        // tracks.forEach((track) => {
+            // console.log(' local track adding');
+            // peerConnection.addTrack(track, localstream);
+        // });
         // console.log('localstream', localstream);
 
     }
@@ -342,3 +342,5 @@ export default function (props) {
         </>
     );
 }
+
+export default ChatBox
