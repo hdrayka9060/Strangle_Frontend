@@ -98,6 +98,8 @@ function ChatBox (props) {
                 let offer = await createoffer();
                 console.log("sending offer");
                 sendJsonMessage({ type, offer, localidx, remoteidx });
+
+                console.log("my offer: ", offer)
             }
         }
 
@@ -117,6 +119,8 @@ function ChatBox (props) {
             localidx = data.remoteidx;
             remoteidx = data.localidx;
             sendJsonMessage({ type, answer, remoteidx });
+
+            console.log("my answer: ", answer)
 
             // console.log('localDiscription', peerConnection.localDescription);
             // console.log('remoteDiscription', peerConnection.remoteDescription);
@@ -249,6 +253,8 @@ function ChatBox (props) {
             sendJsonMessage({ type, offer, localidx, remoteidx });
             // setNegoflag(false);
             negoflag = false;
+
+            console.log("my offer: ", offer)
         }
     };
 
