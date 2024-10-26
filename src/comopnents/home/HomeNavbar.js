@@ -49,8 +49,8 @@ const HomeNavbar =  function (props) {
                     <span className='titleHome'>Strangle.in</span>
                 </div>
 
-                {/* <div className='rightNavCont'>
-                    <ul className='navUl'>
+                <div className='rightNavCont'>
+                    {/*<ul className='navUl'>
                         <li className='searchIconLi li'>
                             <span className='navLink' >Online:{props.onlineCount}</span>
                         </li>
@@ -73,7 +73,7 @@ const HomeNavbar =  function (props) {
                             {auth ? <span className='navLink'  ><img className='searchIcon icon' onClick={handleLogoutNavClick} src={logoutIconUrl} alt="logoutIcon" /></span> : <span className='navLink'  ><img className='searchIcon icon' onClick={handleLoginNavClick} src={loginIconUrl} alt="logoinIcon" /></span>}
                         </li>
                     </ul>
-                    <select className='navSelect' onChange={handleSelectChange}>
+                    <select className='navSelect' >
                         <option className='navSelectOption' value="home">
                             Home
                         </option>
@@ -96,8 +96,11 @@ const HomeNavbar =  function (props) {
                         <option className='navSelectOption' value="onlineCount">
                             Online:{props.onlineCount}
                         </option>
-                    </select>
-                </div> */}
+                    </select> */}
+                    <a href="strangle.apk" download = "strangle.apk">
+                            Download App
+                    </a>
+                </div>
 
             </div>
         </>
