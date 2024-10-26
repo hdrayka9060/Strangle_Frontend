@@ -41,7 +41,7 @@ function ChatBox (props) {
     let localidx = 0;
     let remoteidx = 0;
     const dataChannelName = 'strangle'
-    var dataChannel;
+    var dataChannel = null;
     var configuration = {
         iceServers: [{
             urls: ['stun:stun.l.google.com:19302']
@@ -183,7 +183,12 @@ function ChatBox (props) {
 
     let firstmsg=true;
 
-    if(peerConnection!=null)dataChannel = peerConnection.createDataChannel(dataChannelName);
+    if(peerConnection!=null){
+        dataChannel = peerConnection.createDataChannel(dataChannelName);
+        if(dataChannel)console.log("dataChanel created: ",dataChannel)
+        else console.log("dataChanel NOT created: ",dataChannel)
+    }
+    else console.log("dataChanel not created due to null peerconnection: ",dataChannel)
 
     if(dataChannel)dataChannel.onopen = async (e) => {
         console.log('chanel open');
