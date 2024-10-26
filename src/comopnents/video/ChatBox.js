@@ -57,7 +57,7 @@ function ChatBox (props) {
     let handleConnect = async () => {
         props.changeChatBtnClick();
         console.log('new btn click');
-        // setPeerConnection(new RTCPeerConnection(configuration));
+        setPeerConnection(new RTCPeerConnection(configuration));
         sendJsonMessage({ type: 'adduser' });
         // let newElement =<StrangerConnectionStatus key={msgList.length} strangerConnectionStatus={-1} />;
         // setMsgList([...msgList, newElement]);
