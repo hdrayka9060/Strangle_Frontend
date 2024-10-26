@@ -189,7 +189,7 @@ function ChatBox (props) {
         // else console.log("dataChanel NOT created: ",dataChannel)
     }
     else console.log("dataChanel not created due to null peerconnection: ",dataChannel)
-
+    console.log("peerConnection: ", peerConnection)
     if(dataChannel)dataChannel.onopen = async (e) => {
         console.log('chanel open');
         dataChannel.send('message for testing the connection')
