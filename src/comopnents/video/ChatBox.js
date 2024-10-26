@@ -134,12 +134,14 @@ function ChatBox (props) {
         else if (data.type == 'candidate') {
             let candidate = data.candidate;
             await peerConnection.addIceCandidate(candidate);
+
             console.log('candidate recieved');
             if(peerConnection == null){
                 console.log("PeerConnection Is NULL (Candidate Recieved)")
             }
             else{
-                console.log("PeerConnection Is NOT NULL (Candidate Recieved)")
+                console.log("PeerConnection Is NOT NULL (Candidate Recieved)", peerConnection)
+                console.log("Candidate Recieved", candidate)
             }
         }
 
